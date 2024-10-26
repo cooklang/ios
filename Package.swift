@@ -3,6 +3,9 @@ import PackageDescription
 
 let package = Package(
     name: "CooklangParser",
+    platforms: [
+        .iOS(.v13)
+    ],
     products: [
         .library(
             name: "CooklangParser",
@@ -14,7 +17,7 @@ let package = Package(
             name: "CooklangParser",
             dependencies: ["CooklangParserFFI"],
             path: "Sources/CooklangParser",
-            sources: ["Cooklang.swift"]),
+            sources: ["CooklangParser.swift"]),
         .binaryTarget(
             name: "CooklangParserFFI",
             path: "CooklangParserFFI.xcframework")
